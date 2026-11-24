@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const App = () => {
+
   const [form, setForm] = useState({
     name: "",
     mobile: "",
@@ -9,7 +10,7 @@ const App = () => {
     mealPreference: "",
     startDate: "",
   });
- const API_URL = "https://rasoi-server-1.onrender.com";
+ 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -43,7 +44,7 @@ const App = () => {
 
     try {
       const res = await axios.post(
-        `${API_URL}/post`,
+        "https://rasoi-server.onrender.com/post",
         form
       );
 
