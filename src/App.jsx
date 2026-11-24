@@ -9,7 +9,7 @@ const App = () => {
     mealPreference: "",
     startDate: "",
   });
-
+ const API_URL = "https://rasoi-server-1.onrender.com";
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -43,7 +43,7 @@ const App = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/post",
+        `${API_URL}/post`,
         form
       );
 
